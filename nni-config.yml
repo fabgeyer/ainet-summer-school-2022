@@ -1,0 +1,21 @@
+# NNI v2.6.0
+
+experimentName: code-ainet2022
+trialConcurrency: 6
+maxExperimentDuration: 72h
+
+trainingService:
+  platform: local
+  maxTrialNumberPerGpu: 3
+  useActiveGpu: true
+
+searchSpaceFile: nni-search-space.json
+useAnnotation: false
+tuner:
+  name: TPE
+  classArgs:
+    optimize_mode: minimize
+
+trialCommand: python main.py --nni
+trialCodeDirectory: .
+trialGpuNumber: 1

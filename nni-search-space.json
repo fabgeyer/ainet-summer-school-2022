@@ -1,0 +1,10 @@
+{
+    "preproc": {"_type": "choice", "_value": ["PowerTransformer", "QuantileTransformer", "none"]},
+    "lossfn": {"_type": "choice", "_value": ["MSELoss", "L1Loss", "SmoothL1Loss"]},
+    "final_sigmoid": {"_type": "choice", "_value": [false, true]},
+    "dropout": {"_type": "uniform", "_value": [0, 0.5]},
+    "weight_decay": {"_type": "loguniform", "_value": [0.000001, 1]},
+    "learning_rate": {"_type": "loguniform", "_value": [0.000001, 0.1]},
+    "lr_scheduler_factor": {"_type": "uniform", "_value": [0.0, 1]},
+    "unroll": {"_type": "randint", "_value": [4, 15]}
+}
